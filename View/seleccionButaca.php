@@ -24,7 +24,7 @@
                       $c++;
                       array_push($resultEntrada, $h);
                       ?>
-        <div class="row-number"><img alt="" src='../View/img/butacaRoja.PNG?valor=<?= $h ?> ' onclick="red(this)" id="color<?= $h ?> "  class="<?= $i ?>,<?= $j ?> "  /></div>
+        <div class="row-number"><img alt="" src='../View/img/butacaRoja.PNG?valor=<?= $h ?> ' id="color<?= $h ?> "  class="<?= $i ?>,<?= $j ?> "  /></div>
                 <?php
                   } else {
                        ?>
@@ -33,6 +33,7 @@
                   }
               } else {
                    ?>
+                    <div class="row-number"><img alt="" src='../View/img/butacaGris.PNG?valor=<?=$h?> ' onclick="red(this)" id="color<?=$h?>"class="<?=$i?>,<?=$j?> " /></div>
         <?php $entrada = false;
               }
           }
@@ -60,4 +61,3 @@
  <?php  ?>
 </body>
 </html>
-

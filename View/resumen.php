@@ -3,7 +3,6 @@
 </head>
 
         <body>
-
   <div class="container-resumen">
 
     <div class="content">

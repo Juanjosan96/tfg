@@ -22,11 +22,7 @@ if(isset($movie_id)){
     $resultmovie = json_decode($responsemovie);
 
     // DETALLES DEL TRAILER
-$trailer = curl_init("https://api.themoviedb.org/3/movie/$movie_id/videos?api_key=af7c648ad91e2a16f2da39da7b7f3f54&language=es-ES");
-curl_setopt($trailer, CURLOPT_RETURNTRANSFER, 1);
-$responsetrailer = curl_exec($trailer);
-$resultmovietrailer = json_decode($responsetrailer);
-if(empty($resultmovietrailer->results)){
+if(empty($resultmovie->results)){
     $trailer = curl_init("https://api.themoviedb.org/3/movie/$movie_id/videos?api_key=af7c648ad91e2a16f2da39da7b7f3f54");
 curl_setopt($trailer, CURLOPT_RETURNTRANSFER, 1);
 $responsetrailer = curl_exec($trailer);

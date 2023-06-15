@@ -1,5 +1,5 @@
 <?php
-abstract class CocheDB {
+abstract class CineDB {
     private static $server = 'localhost';
     private static $db = 'cinedaw';
     private static $user = 'root';
