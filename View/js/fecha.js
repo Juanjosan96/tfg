@@ -3,7 +3,7 @@
  var horaSeleccionada = null;
  var bloqueFechaAnterior = null;
  var bloqueHoraAnterior = null;
- var cantidad=1;
+ var cantidad = 1;
 
  function obtenerFechas() {
    var fechas = [];
@@ -93,18 +93,18 @@
    botonEnviar.disabled = !(fechaSeleccionada && horaSeleccionada);
  }
 
+ // Se manda los datos al archivo butaca en Controller
  function enviarDatos() {
    if (fechaSeleccionada && horaSeleccionada) {
      var datos = {
        fecha: fechaSeleccionada,
        hora: horaSeleccionada,
        cantidad: cantidad,
-       precio: cantidad*9
+       precio: cantidad * 9
      };
 
      var form = document.createElement("form");
      form.setAttribute("method", "POST");
-    //  form.setAttribute("action", "../Controller/pruebaAJAX.php");
      form.setAttribute("action", "../Controller/butacas.php");
      var hiddenField = document.createElement("input");
      hiddenField.setAttribute("type", "hidden");
@@ -114,21 +114,19 @@
 
      document.body.appendChild(form);
      form.submit();
-   } else {
-     console.log("Debes seleccionar una fecha y una hora antes de enviar los datos");
    }
  }
 
  var bloquesFecha = document.getElementsByClassName("bloque-fecha");
  for (var i = 0; i < bloquesFecha.length; i++) {
-   bloquesFecha[i].addEventListener("click", function() {
+   bloquesFecha[i].addEventListener("click", function () {
      mostrarInformacionFecha(this);
    });
  }
 
  var bloquesHora = document.getElementsByClassName("bloque-hora");
  for (var i = 0; i < bloquesHora.length; i++) {
-   bloquesHora[i].addEventListener("click", function() {
+   bloquesHora[i].addEventListener("click", function () {
      mostrarInformacionHora(this);
    });
  }

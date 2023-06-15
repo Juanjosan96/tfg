@@ -6,6 +6,7 @@
         <?php
 if ($_SESSION['repetido']) {
     echo 'Usuario ya registrado';
+    $_SESSION['repetido']=false;
 }
 ?>
      </div>

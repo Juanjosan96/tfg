@@ -8,18 +8,18 @@
             <h2>ÚLTIMOS ESTRENOS</h2>
             <?php
             require "../Controller/api.php";
-            foreach ($result2->results as $valor) {
+            foreach ($result->results as $valor) {
                 $total++;
                 if ($total < 19) {
 
-                    $prueba2 = $valor->poster_path;
-                    $prueba3 = $valor->id;
+                    $imagen = $valor->poster_path;
+                    $id = $valor->id;
                     $nombre = $valor->title;
                     ?>
                         <article class="entrada">
             <div class="contenido ">
                 <form action="#" method="get">
-                    <a class="button" href="../Controller/cocheResultado.php?movie=<?= $prueba3 ?>">  <img id="imagen" class=""src="http://image.tmdb.org/t/p/w500/<?= $prueba2 ?>"></a>
+                    <a class="button" href="../Controller/pelicula.php?movie=<?= $id ?>">  <img id="imagen" class=""src="http://image.tmdb.org/t/p/w500/<?= $imagen ?>"></a>
                 </form>
             </div>
         </article>

@@ -27,17 +27,7 @@
 
         <div class="nav-hero">
             <a href="../Controller/index.php">Cartelera</a>
-            <?php
-if (isset($_COOKIE['rol'])) {
-    if ($_COOKIE['rol'] == 'administrador') {
-        ?>
-                    <a href="../Controller/importe.php">Importar</a>
-                    <a href="../Controller/exporte.php">Exportar</a>
-                    <a href="../Controller/create.php">Añadir</a>
-            <?php
-}
-}
-?>
+
             <?php
 if (!isset($_COOKIE['usuario'])) {
     ?>
@@ -62,21 +52,6 @@ if (!isset($_COOKIE['usuario'])) {
 </div>
 </div>
 
-
-
 </header>
 </body>
-<script>
-function toggleMenu() {
-  var menu =  document.querySelector('.nav-hero');
-  var mobileMenu = document.getElementById("mobile-menu");
-  mobileMenu.classList.toggle("active");
-  if (menu.style.display === "flex") {
-    menu.style.display = "none";
-  } else {
-    menu.style.display = "flex";
-  }
-}
-
-</script>
 </html>

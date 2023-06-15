@@ -12,16 +12,8 @@ if (isset($_POST['datos'])) {
   $_SESSION['fecha']=$fecha;
   $_SESSION['hora']=$hora;
   $_SESSION['precio']=$precio;
-} else {
+} 
 
-  // No se han recibido los datos esperados
-  echo "No se han recibido los datos esperados.";
-}
-
-
-
-
-// die();
 $_SESSION['butaca']=[];
 $butaca1 = Butaca::getTodosButacas();
 $array = [];
@@ -45,7 +37,7 @@ $rows = 6;
 $columns = 10;
 $middleColumn = ceil($columns / 2)+1;
 $h = 0;        
-include_once '../View/butacasprueba.php';
+include_once '../View/seleccionButaca.php';
 
 ?>
 <script>

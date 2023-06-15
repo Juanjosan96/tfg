@@ -15,6 +15,7 @@ if(isset($_SESSION['usuario'])){
 }
 
 $arraySeparado = explode(",", $primerArray[0]);
+// Crea los datos en la BD
 foreach (explode(",", $primerArray[0])as $valor) {
     
 if(isset($_SESSION['usuario'])){
@@ -28,6 +29,5 @@ else{
 
 
 }
-// echo '<script>window.location.href = "resumen.php";</script>';
 exit;
 ?> 

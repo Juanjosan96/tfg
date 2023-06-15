@@ -15,7 +15,8 @@
               <h1 class="resumen-titulo">2.Nombre completo:</h1>
         <h2>Anónimo</h2>
 
-        <?php } else {$usuario = Usuario::datosUsuario($_SESSION["usuario"]); ?>
+        <?php } else {
+          ?>
 
           <h1 class="resumen-titulo">2.Nombre completo:</h1>
         <h2><?php print_r($usuario->apellidos . "," . $usuario->nombre); ?></h2>
@@ -24,7 +25,6 @@
 
         <h1 class="resumen-titulo">3.Asientos:</h1>
         <h2><?php print_r($_SESSION["butacas"]); ?></h2>
-
         <h1 class="resumen-titulo">4.Fecha:</h1>
         <h2><?php print_r($_SESSION["fecha"]); ?></h2>
         <h1 class="resumen-titulo">5.Hora:</h1>
